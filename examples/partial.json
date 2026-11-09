@@ -1,0 +1,25 @@
+{
+  "attributes": 2,
+  "objects": [
+    [
+      null,
+      0
+    ]
+  ],
+  "goals": [
+    {
+      "premise": [],
+      "conclusion": [
+        0
+      ]
+    },
+    {
+      "premise": [
+        0
+      ],
+      "conclusion": [
+        1
+      ]
+    }
+  ]
+}
