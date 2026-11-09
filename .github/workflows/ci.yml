@@ -17,7 +17,12 @@ jobs:
       - run: |
           cp docs/audits.json /tmp/audits.json
           cp examples/demo.json /tmp/demo.json
+          cp docs/partial-controls.json /tmp/partial-controls.json
+          cp examples/partial.json /tmp/partial.json
           PYTHONPATH=. python tools/build_audits.py
+          PYTHONPATH=. python tools/build_partial.py
+          cmp docs/partial-controls.json /tmp/partial-controls.json
+          cmp examples/partial.json /tmp/partial.json
           cmp docs/audits.json /tmp/audits.json
           cmp examples/demo.json /tmp/demo.json
   browser-and-wheel:

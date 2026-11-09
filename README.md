@@ -61,3 +61,17 @@ Tests compare full independent native/JavaScript reports on all 689 binary conte
 This implements established formal concept analysis, not a new solver. Exhaustive powersets and pairwise concept operations are intentional at six attributes/eight objects. It is not fuzzy FCA, noisy-rule mining, missing-data inference or a predictive system. The basis theorem concerns minimum **implication count**, not minimum literal count. Rules hold only in the supplied table; adding an object can invalidate them. No causal claim.
 
 The method attributes seven inspected research, teaching and software sources, explains the degenerate-context convention and records the precise original implementation boundary. No external FCA code, datasets, examples, benchmarks or optimized algorithms were copied. No affiliation with Concept Explorer, conexp-clj or fcaR.
+
+## Unknown-cell completions and joint goals
+
+[Live completion inspector](https://midya8.github.io/conceptlab/partial.html) | [Exact semantics, limits and prior sources](PARTIAL.md)
+
+Unknown is not false. Enumerate every bounded binary completion of a 0/1/null context, classify every implication as certain/contingent/impossible, and inspect all completion-indexed object witnesses. Exact integer confidence endpoints retain all ties and separately preserve undefined zero-support completions. Goals share one completion: individually possible goals may be jointly impossible. All inclusion-minimal impossible goal sets retain all one-goal-deletion completion certificates.
+
+```sh
+python -m conceptlab --partial examples/partial.json
+conceptlab --partial examples/partial.json -o /tmp/completions.json
+PYTHONPATH=. python tools/build_partial.py
+```
+
+The separate partial schema allows four attributes/four matrix rows, six unknown cells and four implication goals. Twelve original controls cover 86 completions, 438 queries, 4,634 query/completion witness rows, 63 goal subsets and seven minimal conflicts. All 12 original native and three original Node/Chrome tests remain, with five native and three Node/Chrome tests added. See PARTIAL.md for independent exhaustive references, installed reproduction and parser differences. These are finite knowledge-representation audits, not probabilities, predictions, missing-data estimates or a scalable mining claim.
