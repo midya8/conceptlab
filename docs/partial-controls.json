@@ -1,0 +1,348 @@
+[
+  {
+    "name": "Unknown is not false",
+    "input": {
+      "attributes": 2,
+      "objects": [
+        [
+          null,
+          0
+        ]
+      ],
+      "goals": [
+        {
+          "premise": [],
+          "conclusion": [
+            0
+          ]
+        },
+        {
+          "premise": [
+            0
+          ],
+          "conclusion": [
+            1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Both extreme fill-ins pass, an intermediate completion fails",
+    "input": {
+      "attributes": 2,
+      "objects": [
+        [
+          null,
+          null
+        ]
+      ],
+      "goals": [
+        {
+          "premise": [
+            0
+          ],
+          "conclusion": [
+            1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Overlapping premise remains a tautology",
+    "input": {
+      "attributes": 1,
+      "objects": [
+        [
+          null
+        ]
+      ],
+      "goals": [
+        {
+          "premise": [
+            0
+          ],
+          "conclusion": [
+            0
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "No objects: certain validity without observed support",
+    "input": {
+      "attributes": 2,
+      "objects": [],
+      "goals": [
+        {
+          "premise": [],
+          "conclusion": [
+            0
+          ]
+        },
+        {
+          "premise": [
+            1
+          ],
+          "conclusion": [
+            0
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "No attributes",
+    "input": {
+      "attributes": 0,
+      "objects": [
+        [],
+        []
+      ],
+      "goals": [
+        {
+          "premise": [],
+          "conclusion": []
+        }
+      ]
+    }
+  },
+  {
+    "name": "Both universes empty",
+    "input": {
+      "attributes": 0,
+      "objects": [],
+      "goals": []
+    }
+  },
+  {
+    "name": "Known counterexample cannot be completed away",
+    "input": {
+      "attributes": 2,
+      "objects": [
+        [
+          1,
+          0
+        ],
+        [
+          null,
+          1
+        ]
+      ],
+      "goals": [
+        {
+          "premise": [
+            0
+          ],
+          "conclusion": [
+            1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Known implication and uncertain support",
+    "input": {
+      "attributes": 2,
+      "objects": [
+        [
+          null,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "goals": [
+        {
+          "premise": [
+            0
+          ],
+          "conclusion": [
+            1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Duplicate objects retain distinct witness identities",
+    "input": {
+      "attributes": 2,
+      "objects": [
+        [
+          null,
+          0
+        ],
+        [
+          null,
+          0
+        ]
+      ],
+      "goals": [
+        {
+          "premise": [],
+          "conclusion": [
+            0
+          ]
+        },
+        {
+          "premise": [
+            0
+          ],
+          "conclusion": [
+            1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Six unknowns: every one of 64 completions",
+    "input": {
+      "attributes": 3,
+      "objects": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "goals": [
+        {
+          "premise": [
+            0
+          ],
+          "conclusion": [
+            1
+          ]
+        },
+        {
+          "premise": [
+            1
+          ],
+          "conclusion": [
+            2
+          ]
+        },
+        {
+          "premise": [],
+          "conclusion": [
+            0
+          ]
+        },
+        {
+          "premise": [
+            2
+          ],
+          "conclusion": [
+            0
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "All known: singleton completion",
+    "input": {
+      "attributes": 4,
+      "objects": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "goals": [
+        {
+          "premise": [
+            0
+          ],
+          "conclusion": [
+            1
+          ]
+        },
+        {
+          "premise": [
+            0
+          ],
+          "conclusion": [
+            0
+          ]
+        },
+        {
+          "premise": [],
+          "conclusion": [
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Repeated goals preserve positions",
+    "input": {
+      "attributes": 2,
+      "objects": [
+        [
+          null,
+          0
+        ]
+      ],
+      "goals": [
+        {
+          "premise": [],
+          "conclusion": [
+            0
+          ]
+        },
+        {
+          "premise": [],
+          "conclusion": [
+            0
+          ]
+        },
+        {
+          "premise": [
+            0
+          ],
+          "conclusion": [
+            1
+          ]
+        },
+        {
+          "premise": [],
+          "conclusion": []
+        }
+      ]
+    }
+  }
+]
