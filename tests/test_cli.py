@@ -23,6 +23,19 @@ class CLI(unittest.TestCase):
             subprocess.run([sys.executable,'-m','conceptlab',str(source),'-o',str(out)],check=True)
             self.assertEqual(json.loads(out.read_text()),audit(d))
             self.assertEqual(sorted(x.name for x in Path(temp).iterdir()),['in.json','out.json'])
+    def test_partial_stdout_and_atomic_rejection(self):
+        from conceptlab.partial import audit_partial
+        d={'attributes':2,'objects':[[None,0]],'goals':[{'premise':[],'conclusion':[0]}]}
+        p=subprocess.run([sys.executable,'-m','conceptlab','--partial','-'],input=json.dumps(d),capture_output=True,text=True)
+        self.assertEqual(p.returncode,0,p.stderr);self.assertEqual(json.loads(p.stdout),audit_partial(d))
+        with tempfile.TemporaryDirectory() as temp:
+            source=Path(temp)/'in.json';out=Path(temp)/'out.json';out.write_text('retain me')
+            for text in ['{}','{"attributes":1,"objects":[],"goals":[],"attributes":2}',json.dumps(dict(d,objects=[[False,0]]))]:
+                source.write_text(text)
+                p=subprocess.run([sys.executable,'-m','conceptlab','--partial',str(source),'-o',str(out)],capture_output=True,text=True)
+                self.assertEqual(p.returncode,2);self.assertEqual(out.read_text(),'retain me')
+            source.write_text(json.dumps(d));subprocess.run([sys.executable,'-m','conceptlab','--partial',str(source),'-o',str(out)],check=True)
+            self.assertEqual(json.loads(out.read_text()),audit_partial(d))
     def test_invalid_utf8(self):
         p=subprocess.run([sys.executable,'-m','conceptlab','-'],input=b'\xff',capture_output=True)
         self.assertEqual(p.returncode,2)
