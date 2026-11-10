@@ -1,0 +1,299 @@
+[
+  {
+    "name": "empty expert",
+    "note": "No objects: validity is vacuous, not empirical support.",
+    "input": {
+      "context": {
+        "attributes": 0,
+        "objects": []
+      },
+      "initial_objects": []
+    }
+  },
+  {
+    "name": "empty rows",
+    "note": "With no attributes, no nontrivial question exists.",
+    "input": {
+      "context": {
+        "attributes": 0,
+        "objects": [
+          [],
+          []
+        ]
+      },
+      "initial_objects": []
+    }
+  },
+  {
+    "name": "one universal attribute",
+    "note": "An empty premise may be accepted.",
+    "input": {
+      "context": {
+        "attributes": 2,
+        "objects": [
+          [
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "initial_objects": []
+    }
+  },
+  {
+    "name": "retry the same premise",
+    "note": "Several counterexamples refine the same observed conclusion.",
+    "input": {
+      "context": {
+        "attributes": 3,
+        "objects": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "initial_objects": []
+    }
+  },
+  {
+    "name": "observed is not domain",
+    "note": "A rule valid in the starting table can be refuted by a hidden row.",
+    "input": {
+      "context": {
+        "attributes": 3,
+        "objects": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "initial_objects": [
+        0
+      ]
+    }
+  },
+  {
+    "name": "implication chain",
+    "note": "Accepted knowledge changes later lectic candidates.",
+    "input": {
+      "context": {
+        "attributes": 3,
+        "objects": [
+          [],
+          [
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "initial_objects": []
+    }
+  },
+  {
+    "name": "all rows known",
+    "note": "No rejection needed: all candidate implications already see the expert table.",
+    "input": {
+      "context": {
+        "attributes": 3,
+        "objects": [
+          [],
+          [
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "initial_objects": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "name": "vacuous premise",
+    "note": "A premise with no supporting row still has full closure.",
+    "input": {
+      "context": {
+        "attributes": 3,
+        "objects": [
+          [],
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "initial_objects": []
+    }
+  },
+  {
+    "name": "duplicate object identities",
+    "note": "Duplicate rows remain distinct expert objects, but may remain unseen.",
+    "input": {
+      "context": {
+        "attributes": 2,
+        "objects": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "initial_objects": []
+    }
+  },
+  {
+    "name": "no nontrivial rules",
+    "note": "All subsets occur: counterexamples remove every nontrivial proposal.",
+    "input": {
+      "context": {
+        "attributes": 3,
+        "objects": [
+          [],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "initial_objects": []
+    }
+  },
+  {
+    "name": "five attribute expert",
+    "note": "A bounded larger context retains the entire closure audit.",
+    "input": {
+      "context": {
+        "attributes": 5,
+        "objects": [
+          [],
+          [
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      "initial_objects": []
+    }
+  },
+  {
+    "name": "already enough observations",
+    "note": "Some rows can remain unseen while the theory is complete.",
+    "input": {
+      "context": {
+        "attributes": 3,
+        "objects": [
+          [],
+          [
+            0,
+            1
+          ],
+          [
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "initial_objects": [
+        0,
+        1,
+        2
+      ]
+    }
+  }
+]

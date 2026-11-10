@@ -75,3 +75,14 @@ PYTHONPATH=. python tools/build_partial.py
 ```
 
 The separate partial schema allows four attributes/four matrix rows, six unknown cells and four implication goals. Twelve original controls cover 86 completions, 438 queries, 4,634 query/completion witness rows, 63 goal subsets and seven minimal conflicts. All 12 original native and three original Node/Chrome tests remain, with five native and three Node/Chrome tests added. See PARTIAL.md for independent exhaustive references, installed reproduction and parser differences. These are finite knowledge-representation audits, not probabilities, predictions, missing-data estimates or a scalable mining claim.
+
+## Attribute exploration: a table is not an expert
+
+The [exact-expert inspector](https://midya8.github.io/conceptlab/exploration.html) distinguishes implications fitted to observed rows from implications checked against an explicitly supplied complete expert table. Reveal actual counterexamples, retry the same premise, inspect accepted knowledge and every lectic pivot, then audit closure equality for every attribute subset. This is a bounded simulated expert, not human interaction or external domain truth.
+
+Independent Python set/model-intersection verification also checks exhaustive lectic successors and the canonical basis through a separate pseudo-intent characterization. Twelve synthetic controls include repeated refutation, vacuity, implication chains, duplicate identities and sufficient-but-not-exhaustive observations. The [protocol, limits, reproduction and prior-work credits](EXPLORATION.md) state exactly what is checked.
+
+```sh
+python -m conceptlab --exploration examples/exploration.json -o report.json
+python -m conceptlab --verify-exploration report.json
+```

@@ -90,3 +90,7 @@ Retained corpus: 14 controls, 194 attribute subsets, 390 object subsets, 69 conc
 5. **fcaR, Working with ImplicationSets, CRAN software documentation.** Introduction, canonical-basis extraction and implication display. Evidence of existing functionality, not a source of implementation or sample data. ConceptLab does not implement its fuzzy FCA features. https://cran.r-project.org/web/packages/fcaR/vignettes/implications.html
 6. **Concept Explorer, Documentation.** Intro/main interface, context editing, lattice interpretation/subcontexts and Duquenne-Guigues-basis sections. Established functionality is acknowledged; no affiliation or UI/code reuse. https://conexp.sourceforge.net/users/documentation/
 7. **Radim Belohlavek, Introduction to Formal Concept Analysis, Olomouc (2008).** Sections 1.1, 2.1-2.3 and 2.6: binary contexts and formal concepts, extent/reverse-intent order, and Main Theorem 2.35's meet/join formulas. Its nonempty-universe convention differs from the explicitly supported degenerate cases above. https://phoenix.inf.upol.cz/esf/ucebni/formal.pdf
+
+## Exact-expert attribute exploration
+
+The separate [exploration contract](EXPLORATION.md) defines observed-versus-domain validity, deterministic counterexample refinement, accepted theory closure, lectic pivot records and independent verification. It uses a supplied complete table as a simulated exact expert; it adds no assumptions about real-world truth. Existing complete and partial inspectors retain their contracts.
