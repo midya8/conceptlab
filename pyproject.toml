@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "conceptlab"
-version = "0.2.0"
+version = "0.3.0"
 description = "Exact finite formal concepts, canonical implications and full closure witnesses"
 requires-python = ">=3.10"
 license = {text = "MIT"}
