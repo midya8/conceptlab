@@ -1,0 +1,21 @@
+{
+  "context": {
+    "attributes": 3,
+    "objects": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "initial_objects": [
+    0
+  ]
+}
