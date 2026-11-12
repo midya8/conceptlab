@@ -1,4 +1,9 @@
-# ConceptLab: exact method and limits
+# ConceptLab: complete binary contexts
+
+These notes define the original binary-context mode. [PARTIAL.md](PARTIAL.md)
+defines explicit unknown cells; [EXPLORATION.md](EXPLORATION.md) defines the
+separate simulated-expert protocol. Missing incidence in this mode is false,
+not an unknown value.
 
 ## What is original
 
