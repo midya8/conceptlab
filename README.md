@@ -1,12 +1,28 @@
 # ConceptLab
 
-**A shared description. A complete concept.**
+Inspect the concepts and implication rules of a small supplied object-attribute
+table. ConceptLab retains every closure, lattice operation, pseudo-intent
+decision and NextClosure attempt. Separate modes enumerate unknown-cell
+completions or reveal counterexamples from a complete simulated expert table.
 
-An exact finite formal-concept and attribute-implication workbench. Independent Python bitsets and JavaScript sets retain every closure, lattice operation, pseudo-intent decision and NextClosure attempt. No model, API, package runtime dependency or private data.
+Python bitsets and browser JavaScript sets compute the reports separately.
+No model, API, package runtime dependency or private data.
 
 [Live inspector](https://midya8.github.io/conceptlab/) · [Method, sources and exact conventions](METHOD.md)
 
-## Inspect the whole finite context
+## Choose a mode
+
+| Question | Mode |
+|---|---|
+| Which attribute sets are closed, and which implications hold in this table? | [Complete binary context](https://midya8.github.io/conceptlab/) |
+| What can change when explicit unknown cells are filled in? | [Unknown-cell completions](https://midya8.github.io/conceptlab/partial.html) |
+| Which observed rules survive counterexamples from a supplied expert table? | [Attribute exploration](https://midya8.github.io/conceptlab/exploration.html) |
+
+The binary mode treats missing incidence as false. The completion mode uses
+explicit null cells. Exploration uses a complete simulated expert table; it
+does not turn a sample into external domain truth.
+
+## Inspect a complete context
 
 - Every attribute subset's supporting objects, double-derivation closure, support counts and all counterexamples to each missing attribute.
 - Every object subset's common attributes and closure, including empty subsets and degenerate contexts.
@@ -21,6 +37,10 @@ An exact finite formal-concept and attribute-implication workbench. Independent 
 Python 3.10+:
 
 ```sh
+git clone https://github.com/midya8/conceptlab.git
+cd conceptlab
+python -m venv .venv
+. .venv/bin/activate
 python -m pip install .
 conceptlab examples/demo.json -o audit.json
 python -m conceptlab examples/demo.json
@@ -34,7 +54,9 @@ The browser runs locally after loading static assets. Serve the directory rather
 python -m http.server 8000 --directory docs
 ```
 
-Node 22 and a Chrome/Chromium binary run the independent-engine and actual-browser tests:
+Node 22+ and a Chrome/Chromium binary run the engine and actual-browser tests.
+The separate wheel check also needs `uv`; it builds and installs into a temporary
+environment, then runs outside the checkout:
 
 ```sh
 npm test
@@ -52,7 +74,7 @@ Attribute count is 0..6. There are 0..8 objects, each an array of unique attribu
 
 ## Controls and verification
 
-Fourteen retained controls cover 194 attribute subsets, 390 object subsets, 69 concepts, 30 basis rules and 635 ordered concept-pair operations. The browser audits 5,762 implication queries across these controls. Controls distinguish vacuous validity from supporting evidence, count duplicate rows without inventing concepts, retain contranominal closure systems, and expose strict join/pseudo-intent/derivation failures of simpler assumptions.
+The retained binary controls distinguish vacuous validity from supporting evidence, count duplicate rows without inventing concepts, retain contranominal closure systems, and expose strict join/pseudo-intent/derivation failures of simpler assumptions.
 
 Tests compare full independent native/JavaScript reports on all 689 binary contexts with 0..3 attributes and 0..3 objects, plus 100 seeded larger contexts. Separate set references, exhaustive basis-model enumeration, Galois adjunction, closure laws, concept-order meet/join and lectic sorting check the native engine. Actual Chrome tests inspect all retained controls, tables, cards, selectors, full records, export, stale-output clearing and 320/390/1280 containment. These counts describe tested coverage, not a speed benchmark or general-domain validation.
 
@@ -74,13 +96,13 @@ conceptlab --partial examples/partial.json -o /tmp/completions.json
 PYTHONPATH=. python tools/build_partial.py
 ```
 
-The separate partial schema allows four attributes/four matrix rows, six unknown cells and four implication goals. Twelve original controls cover 86 completions, 438 queries, 4,634 query/completion witness rows, 63 goal subsets and seven minimal conflicts. All 12 original native and three original Node/Chrome tests remain, with five native and three Node/Chrome tests added. See PARTIAL.md for independent exhaustive references, installed reproduction and parser differences. These are finite knowledge-representation audits, not probabilities, predictions, missing-data estimates or a scalable mining claim.
+The partial schema allows four attributes, four matrix rows, six unknown cells and four implication goals. Its controls check completion-indexed witnesses, confidence endpoints, zero-support cases and minimal joint-goal conflicts. [PARTIAL.md](PARTIAL.md) retains the individual coverage counts, independent exhaustive references, installed reproduction and parser differences. These are finite knowledge-representation audits, not probabilities, predictions, missing-data estimates or a scalable mining claim.
 
 ## Attribute exploration: a table is not an expert
 
 The [exact-expert inspector](https://midya8.github.io/conceptlab/exploration.html) distinguishes implications fitted to observed rows from implications checked against an explicitly supplied complete expert table. Reveal actual counterexamples, retry the same premise, inspect accepted knowledge and every lectic pivot, then audit closure equality for every attribute subset. This is a bounded simulated expert, not human interaction or external domain truth.
 
-Independent Python set/model-intersection verification also checks exhaustive lectic successors and the canonical basis through a separate pseudo-intent characterization. Twelve synthetic controls include repeated refutation, vacuity, implication chains, duplicate identities and sufficient-but-not-exhaustive observations. The [protocol, limits, reproduction and prior-work credits](EXPLORATION.md) state exactly what is checked.
+Independent Python set/model-intersection verification checks exhaustive lectic successors and the canonical basis through a separate pseudo-intent characterization. Synthetic controls include repeated refutation, vacuity, implication chains, duplicate identities and sufficient-but-not-exhaustive observations. The [protocol, limits, reproduction and prior-work credits](EXPLORATION.md) state exactly what is checked.
 
 ```sh
 python -m conceptlab --exploration examples/exploration.json -o report.json
