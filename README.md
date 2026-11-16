@@ -62,7 +62,15 @@ environment, then runs outside the checkout:
 npm test
 # CHROME_BIN=/path/to/chrome npm test
 sh tools/wheel_smoke.sh
+python tools/check_installed.py
 ```
+
+The full installed check builds a wheel, copies tests and fixtures into a separate
+working directory and runs all 24 Python tests there. It checks all six module
+origins before and after the suite, then keeps the existing 14 binary, 12 partial
+and 12 exploration report checks, both CLI entry points and 24 forged-exploration
+rejections. It needs Python with pip and venv; unlike the smoke script it does not
+need uv. The source and browser tests remain separate checks.
 
 ## Input
 
