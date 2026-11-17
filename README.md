@@ -1,22 +1,22 @@
-# ConceptLab
+# Formal concepts
 
 Inspect the concepts and implication rules of a small supplied object-attribute
-table. ConceptLab retains every closure, lattice operation, pseudo-intent
+table. Formal concepts retains every closure, lattice operation, pseudo-intent
 decision and NextClosure attempt. Separate modes enumerate unknown-cell
 completions or reveal counterexamples from a complete simulated expert table.
 
 Python bitsets and browser JavaScript sets compute the reports separately.
 No model, API, package runtime dependency or private data.
 
-[Live inspector](https://midya8.github.io/conceptlab/) · [Method, sources and exact conventions](METHOD.md)
+[Live inspector](https://midya8.github.io/formal-concepts/) · [Method, sources and exact conventions](METHOD.md)
 
 ## Choose a mode
 
 | Question | Mode |
 |---|---|
-| Which attribute sets are closed, and which implications hold in this table? | [Complete binary context](https://midya8.github.io/conceptlab/) |
-| What can change when explicit unknown cells are filled in? | [Unknown-cell completions](https://midya8.github.io/conceptlab/partial.html) |
-| Which observed rules survive counterexamples from a supplied expert table? | [Attribute exploration](https://midya8.github.io/conceptlab/exploration.html) |
+| Which attribute sets are closed, and which implications hold in this table? | [Complete binary context](https://midya8.github.io/formal-concepts/) |
+| What can change when explicit unknown cells are filled in? | [Unknown-cell completions](https://midya8.github.io/formal-concepts/partial.html) |
+| Which observed rules survive counterexamples from a supplied expert table? | [Attribute exploration](https://midya8.github.io/formal-concepts/exploration.html) |
 
 The binary mode treats missing incidence as false. The completion mode uses
 explicit null cells. Exploration uses a complete simulated expert table; it
@@ -37,7 +37,7 @@ does not turn a sample into external domain truth.
 Python 3.10+:
 
 ```sh
-git clone https://github.com/midya8/conceptlab.git
+git clone https://github.com/midya8/formal-concepts.git
 cd conceptlab
 python -m venv .venv
 . .venv/bin/activate
@@ -94,7 +94,7 @@ The method attributes seven inspected research, teaching and software sources, e
 
 ## Unknown-cell completions and joint goals
 
-[Live completion inspector](https://midya8.github.io/conceptlab/partial.html) | [Exact semantics, limits and prior sources](PARTIAL.md)
+[Live completion inspector](https://midya8.github.io/formal-concepts/partial.html) | [Exact semantics, limits and prior sources](PARTIAL.md)
 
 Unknown is not false. Enumerate every bounded binary completion of a 0/1/null context, classify every implication as certain/contingent/impossible, and inspect all completion-indexed object witnesses. Exact integer confidence endpoints retain all ties and separately preserve undefined zero-support completions. Goals share one completion: individually possible goals may be jointly impossible. All inclusion-minimal impossible goal sets retain all one-goal-deletion completion certificates.
 
@@ -108,7 +108,7 @@ The partial schema allows four attributes, four matrix rows, six unknown cells a
 
 ## Attribute exploration: a table is not an expert
 
-The [exact-expert inspector](https://midya8.github.io/conceptlab/exploration.html) distinguishes implications fitted to observed rows from implications checked against an explicitly supplied complete expert table. Reveal actual counterexamples, retry the same premise, inspect accepted knowledge and every lectic pivot, then audit closure equality for every attribute subset. This is a bounded simulated expert, not human interaction or external domain truth.
+The [exact-expert inspector](https://midya8.github.io/formal-concepts/exploration.html) distinguishes implications fitted to observed rows from implications checked against an explicitly supplied complete expert table. Reveal actual counterexamples, retry the same premise, inspect accepted knowledge and every lectic pivot, then audit closure equality for every attribute subset. This is a bounded simulated expert, not human interaction or external domain truth.
 
 Independent Python set/model-intersection verification checks exhaustive lectic successors and the canonical basis through a separate pseudo-intent characterization. Synthetic controls include repeated refutation, vacuity, implication chains, duplicate identities and sufficient-but-not-exhaustive observations. The [protocol, limits, reproduction and prior-work credits](EXPLORATION.md) state exactly what is checked.
 
